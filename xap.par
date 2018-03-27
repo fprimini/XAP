@@ -1,0 +1,12 @@
+infile,f,a,"acisf01575_001N001_evt3.fits.gz[energy=500:7000]",,,"Input event list or image"
+outfile,f,a,"mpdf_r0115_r0116_r0123_r0150_uninformative.fits",,,"Output binary fits table of pdfs, one extension per source"
+srcstack,f,a,"r0115_r0116_r0123_r0150_srcs.lis",,,"Source Regions"
+breg,f,a,"new_acisf01575_001N001_r0116_bkgreg3.fits",,,"Background Regions"
+psfstack,f,a,"r0115_r0116_r0123_r0150_psfs.lis",,,"PSF Files"
+expstack,f,a,"r0115_r0116_r0123_r0150_regexps.lis",,,"EXP Files"
+CL,r,h,0.68269,,,"Desired Confidence Level"
+intenstack,f,a,"none",,,"Source Intensities and Variances for Gamma-Priors"
+nmesh,i,h,30,,,"Number of mesh points per source"
+verbose,i,h,1,0,5,"Debug Level(0-5)"
+clobber,b,h,yes,,,"Overwrite existing outputs?"
+mode,s,h,"ql",,,

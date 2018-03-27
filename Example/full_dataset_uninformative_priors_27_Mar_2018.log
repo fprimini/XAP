@@ -1,0 +1,85 @@
+imoose-64: ../xap.py @@../xap.par
+Input event list or image (acisf01575_001N001_evt3.fits.gz[energy=500:7000]): acisf01575_001N001_evt3.fits.gz[energy=500:7000]
+Output binary fits table of pdfs, one extension per source (mpdf_r0115_r0116_r0123_r0150_uninformative.fits): mpdf_r0115_r0116_r0123_r0150_uninformative.fits
+Background Regions (new_acisf01575_001N001_r0116_bkgreg3.fits): new_acisf01575_001N001_r0116_bkgreg3.fits
+Source Regions (r0115_r0116_r0123_r0150_srcs.lis): r0115_r0116_r0123_r0150_srcs.lis
+PSF Files (r0115_r0116_r0123_r0150_psfs.lis): r0115_r0116_r0123_r0150_psfs.lis
+EXP Files (r0115_r0116_r0123_r0150_regexps.lis): r0115_r0116_r0123_r0150_regexps.lis
+Source Intensities and Variances for Gamma-Priors (none): none
+Getting Events from acisf01575_001N001_evt3.fits.gz[energy=500:7000]
+
+Exposure:	37664.157219
+Output results to mpdf_r0115_r0116_r0123_r0150_uninformative.fits
+
+Source Regions:
+acisf01575_001N001_r0115_srcreg3.fits
+acisf01575_001N001_r0116_srcreg3.fits
+acisf01575_001N001_r0123_srcreg3.fits
+acisf01575_001N001_r0150_srcreg3.fits
+
+Background Regions:
+new_acisf01575_001N001_r0116_bkgreg3.fits
+
+PSF Images:
+acisf01575_001N001_r0115b_psf3.fits.gz
+acisf01575_001N001_r0116b_psf3.fits.gz
+acisf01575_001N001_r0123b_psf3.fits.gz
+acisf01575_001N001_r0150b_psf3.fits.gz
+
+
+Counts in Region 0:		2395.000000
+Counts in Region 1:		759.000000
+Counts in Region 2:		90.000000
+Counts in Region 3:		273.000000
+
+Counts in Background Region:	1043.000000
+
+F:
+[[  9.47097792e+06   0.00000000e+00   1.88825435e+03   5.61431210e+03
+    2.81542818e+10]
+ [  0.00000000e+00   8.43717107e+06   7.49609455e+03   1.30013338e+04
+    3.40651940e+10]
+ [  0.00000000e+00   3.77625891e+03   9.27489281e+06   9.38946854e+03
+    3.02678311e+10]
+ [  1.79756938e+03   9.35427532e+05   5.58759992e+03   9.27772159e+06
+    3.77550753e+10]
+ [  6.86684574e+04   1.26875147e+05   2.78983391e+05   1.24331647e+05
+    1.25572609e+12]]
+
+
+Intensity Grid Attributes:
+Grid Half-size number of MLE sigma:	5.000000
+Minimum allowable grid value:		1.000000e-10
+Number of grid points (per dimension):	30
+
+Source 0:	Mesh Length: 30
+Source 1:	Mesh Length: 30
+Source 2:	Mesh Length: 30
+Source 3:	Mesh Length: 30
+Source 4:	Mesh Length: 30
+
+Building Priors.....
+Using Non-informative Priors.....
+				Intensity	Lower Bound	Upper Bound
+				---------	-----------	-----------
+MLE   Estimate for Source 0 =	2.504735e-04	2.453049e-04	2.556421e-04
+Bayes Estimate for Source 0 =	2.504663e-04	2.453738e-04	2.557455e-04
+MLE   Estimate for Source 1 =	8.667643e-05	8.340777e-05	8.994510e-05
+Bayes Estimate for Source 1 =	8.666781e-05	8.345135e-05	9.001047e-05
+MLE   Estimate for Source 2 =	7.024156e-06	5.997127e-06	8.051185e-06
+Bayes Estimate for Source 2 =	7.016438e-06	6.038933e-06	8.099839e-06
+MLE   Estimate for Source 3 =	1.735807e-05	1.554383e-05	1.917232e-05
+Bayes Estimate for Source 3 =	1.734288e-05	1.557834e-05	1.921893e-05
+MLE   Estimate for Background =	8.048614e-10	7.790953e-10	8.306276e-10
+Bayes Estimate for Background =	8.047743e-10	7.794389e-10	8.311429e-10
+
+Estimates of Means and Variances of Individual Sources
+
+s_mean    	Var(s)
+------    	------
+2.5058e-04	2.6725e-11
+8.6792e-05	1.0698e-11
+7.1293e-06	1.0660e-12
+1.7451e-05	3.3029e-12
+8.0561e-10	6.6450e-22
+imoose-65: 
