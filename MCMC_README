@@ -1,0 +1,44 @@
+This package contains python code for computing aperture photometry for
+unresolved sources in astronomical x-ray images, as described in the article
+"DETERMINING X-RAY SOURCE INTENSITY AND CONFIDENCE BOUNDS IN CROWDED FIELDS",
+Primini, F.A and Kashyap, V.L. 2014, The Astrophysical Journal, v. 796, pp. 24-37.
+
+This version of the code uses the CIAO Sherpa and pyBLoCXS environments to sample
+the posterior probability distribution.
+
+The code is designed to run within the CIAO data analysis environment
+(http://cxc.cfa.harvard.edu/ciao), but has not yet been tested with CIAO v. 4.10
+or Python 3.
+
+
+xap_mcmc_only.py				       Main Python program
+xap_funs.py					       Function and Class definitions for xap.py
+xap_mcmc_funs.py				       Additional MCMC functions and class definitions
+xap_mcmc_only.par				       CIAO style parameter file for xap.py
+	
+
+XAP/MCMC_Example:				       Test data for Figure 1 in Primini & Kashyap, 2014
+acisf01575_001N001_evt3.fits.gz			       Test Chandra Level 3 Event List
+acisf01575_001N001_r0115b_psf3.fits.gz		       Level 3 PSF image for source r0115 
+acisf01575_001N001_r0115b_regexp3.fits.gz	       Level 3 expmap for r0115
+acisf01575_001N001_r0115_srcreg3.fits		       Level 3 source region for r0115
+acisf01575_001N001_r0116b_psf3.fits.gz		       PSF image for r0116
+acisf01575_001N001_r0116b_regexp3.fits.gz	       expmap for r0116
+acisf01575_001N001_r0116_srcreg3.fits		       source region for r0116
+acisf01575_001N001_r0123b_psf3.fits.gz		       PSF image for r0123
+acisf01575_001N001_r0123b_regexp3.fits.gz	       expmap for r0123
+acisf01575_001N001_r0123_srcreg3.fits		       source region for r0123
+acisf01575_001N001_r0150b_psf3.fits.gz		       PSF image for r0150
+acisf01575_001N001_r0150b_regexp3.fits.gz	       expmap for r0150
+acisf01575_001N001_r0150_srcreg3.fits		       source region for r0150
+new_acisf01575_001N001_r0116_bkgreg3.fits	       background region for all sources
+r0115_r0116_r0123_r0150_psfs.lis		       stack of psf filenames
+r0115_r0116_r0123_r0150_regexps.lis		       stack of expmap filenames
+r0115_r0116_r0123_r0150_srcs.lis		       stack of source region filenames
+mcmc_r0115_r0116_r0123_r0150_mpdfs.fits 	       fits file containing marginalized posterior probability
+						       distributions for all sources and background, in
+						       separate fits extensions. Two separate smoothing
+						       functions are used for each mpdf. 
+mcmc_r0115_r0116_r0123_r0150_draws.fits		       fits file containing mcmc draws used to sample mpdfs.
+xap_mcmc_only.log                                      log of test run
+

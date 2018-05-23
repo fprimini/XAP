@@ -1,0 +1,74 @@
+imoose-209: ./xap_mcmc_only.py @@xap_mcmc_only.par
+Getting Events from acisf01575_001N001_evt3.fits.gz[energy=500:7000]
+
+Exposure:	37664.157219
+Source Regions:
+acisf01575_001N001_r0115_srcreg3.fits
+acisf01575_001N001_r0116_srcreg3.fits
+acisf01575_001N001_r0123_srcreg3.fits
+acisf01575_001N001_r0150_srcreg3.fits
+
+Background Regions:
+new_acisf01575_001N001_r0116_bkgreg3.fits
+
+PSF Images:
+acisf01575_001N001_r0115b_psf3.fits.gz
+acisf01575_001N001_r0116b_psf3.fits.gz
+acisf01575_001N001_r0123b_psf3.fits.gz
+acisf01575_001N001_r0150b_psf3.fits.gz
+
+
+Counts in Region 0:		2395.000000
+Counts in Region 1:		759.000000
+Counts in Region 2:		90.000000
+Counts in Region 3:		273.000000
+
+Counts in Background Region:	1043.000000
+
+F:
+[[  9.47097792e+06   0.00000000e+00   1.88825435e+03   5.61431210e+03
+    2.81542818e+10]
+ [  0.00000000e+00   8.43717107e+06   7.49609455e+03   1.30013338e+04
+    3.40651940e+10]
+ [  0.00000000e+00   3.77625891e+03   9.27489281e+06   9.38946854e+03
+    3.02678311e+10]
+ [  1.79756938e+03   9.35427532e+05   5.58759992e+03   9.27772159e+06
+    3.77550753e+10]
+ [  6.86684574e+04   1.26875147e+05   2.78983391e+05   1.24331647e+05
+    1.25572609e+12]]
+
+
+Running MCMC...
+Dataset               = 1
+Method                = moncar
+Statistic             = cash
+Initial fit statistic = -56578.1
+Final fit statistic   = -56589.2 at function evaluation 921
+Data points           = 5
+Degrees of freedom    = 0
+Change in statistic   = 11.0337
+   xap.Source_0   0.000250474 
+   xap.Source_1   8.66764e-05 
+   xap.Source_2   7.02416e-06 
+   xap.Source_3   1.73581e-05 
+   xap.Background   8.04861e-10 
+Dataset               = 1
+Confidence Method     = covariance
+Iterative Fit Method  = None
+Fitting Method        = moncar
+Statistic             = cash
+covariance 1-sigma (68.2689%) bounds:
+   Param            Best-Fit  Lower Bound  Upper Bound
+   -----            --------  -----------  -----------
+   xap.Source_0  0.000250474 -5.16864e-06  5.16864e-06
+   xap.Source_1  8.66764e-05 -3.26866e-06  3.26866e-06
+   xap.Source_2  7.02416e-06 -1.02701e-06  1.02701e-06
+   xap.Source_3  1.73581e-05 -1.81424e-06  1.81424e-06
+   xap.Background  8.04861e-10 -2.57661e-11  2.57661e-11
+Using Priors:
+xap.Source_0: <function flat at 0x106adb6e0>
+xap.Source_1: <function flat at 0x106adb6e0>
+xap.Source_2: <function flat at 0x106adb6e0>
+xap.Source_3: <function flat at 0x106adb6e0>
+xap.Background: <function flat at 0x106adb6e0>
+imoose-210:
