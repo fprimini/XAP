@@ -3,21 +3,23 @@ unresolved sources in astronomical x-ray images, as described in the article
 "DETERMINING X-RAY SOURCE INTENSITY AND CONFIDENCE BOUNDS IN CROWDED FIELDS",
 Primini, F.A and Kashyap, V.L. 2014, The Astrophysical Journal, v. 796, pp. 24-37.
 
+The code is designed to run within the CIAO data analysis environment (http://cxc.cfa.harvard.edu/ciao), 
+and has been tested with CIAO v. 4.11 and Python v. 3.5.4. It has been updated 
+to include all relevant functions in earlier files xap_funs.py and xap_mcmc_funs.py 
+in the main program file. There are no other external dependencies.
+
 This version of the code uses the CIAO Sherpa and pyBLoCXS environments to sample
-the posterior probability distribution.
+the posterior probability distributions.
 
-The code is designed to run within the CIAO data analysis environment
-(http://cxc.cfa.harvard.edu/ciao), but has not yet been tested with CIAO v. 4.10
-or Python 3.
+File						       Contents
+----						       --------
 
-
-xap_mcmc_only.py				       Main Python program
-xap_funs.py					       Function and Class definitions for xap.py
-xap_mcmc_funs.py				       Additional MCMC functions and class definitions
-xap_mcmc_only.par				       CIAO style parameter file for xap.py
+xap_mcmc.py			   		       Main Python program
+xap_mcmc.par					       CIAO style parameter file for xap.py
 	
 
-XAP/MCMC_Example:				       Test data for Figure 1 in Primini & Kashyap, 2014
+XAP/MCMC_Example:				       Directory containing test data for 
+						       Figure 1 in Primini & Kashyap, 2014
 acisf01575_001N001_evt3.fits.gz			       Test Chandra Level 3 Event List
 acisf01575_001N001_r0115b_psf3.fits.gz		       Level 3 PSF image for source r0115 
 acisf01575_001N001_r0115b_regexp3.fits.gz	       Level 3 expmap for r0115
@@ -37,8 +39,9 @@ r0115_r0116_r0123_r0150_regexps.lis		       stack of expmap filenames
 r0115_r0116_r0123_r0150_srcs.lis		       stack of source region filenames
 mcmc_r0115_r0116_r0123_r0150_mpdfs.fits 	       fits file containing marginalized posterior probability
 						       distributions for all sources and background, in
-						       separate fits extensions. Two separate smoothing
-						       functions are used for each mpdf. 
+						       separate fits extensions. Mpdfs are modelled
+						       as Gamma distributions, with parameters alpha and
+						       beta determined from the corresponding draws.
 mcmc_r0115_r0116_r0123_r0150_draws.fits		       fits file containing mcmc draws used to sample mpdfs.
 xap_mcmc_only.log                                      log of test run
 
