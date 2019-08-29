@@ -550,9 +550,12 @@ def main(argv):
 
         print( "\nCounts in Background Region:\t{}".format(C[number_of_sources]))
 
-        print( "\nF:")
-        print( F)
-        print( "\n")
+        print ("\nPSF Fractions Matrix F:")
+        for i in arange(0,number_of_params):
+            for j in arange(0,number_of_sources):
+                print("{:.4e}".format(F[i][j]),end='  ')
+            print("{:e}".format(F[i][number_of_sources]))
+        print ("\n")
 
     # Solve for MLE intensities and errors:
 
